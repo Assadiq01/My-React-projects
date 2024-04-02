@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+body {
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    display: flex;
+    background-color: rgb(41, 81, 97);
+    color: white;
+    padding: 20px 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header img {
+    width: 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-container {
+    background-color: rgb(40, 127, 161);
+    border-radius: 10px;
+    display: flex;
+    color: white;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 30px;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
 }
 
-.App-link {
-  color: #61dafb;
+.main-container img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inner-container {
+    margin-left: 20px;
+    flex: 1; /* Take up remaining space */
+}
+
+.social-media {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+}
+
+.social-media p {
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.social-media p a {
+    text-decoration: none; /* Remove text decoration */
+    color: inherit;
+}
+
+.social-media p a:hover {
+    color: inherit;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .main-container {
+        margin: 20px;
+    }
+
+    .main-container img {
+        max-width: 100%;
+    }
+    
+    .social-media p {
+        align-items: center;
+    }
 }
